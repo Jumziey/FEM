@@ -1,0 +1,11 @@
+License Information
+
+This library contains the Matlab sourcecode files included in: 
+
+The Finite Element Method: Theory, Implementation, and Applications, 
+Mats G. Larson and Fredrik Bengzon, Texts in Computational Science and 
+Engineering (Book 10), Springer; 2013 edition (January 12, 2013), ISBN-10: 3642332862, ISBN-13: 978-3642332869
+
+
+This library is free software. It can be redistributed and/or modified under the terms of the GNU Lesser General Public License as published by the Free Software Foundation ; either version 2.1 of the License, or any later version. This library is distributed WITHOUT ANY WARRANTY, and without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details. Your use or distribution of this software library or any derivative code implies that you agree to this License. 
+
