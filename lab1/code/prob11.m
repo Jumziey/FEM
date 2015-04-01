@@ -13,7 +13,7 @@ laplaceAna = -laplacian(F,[x,y])
 
 gF = gradient(F,[x y]);
 gFsquare = gF(1)^2 + gF(2)^2
-integrate(gFsquare
+int(gFsquare, x,y)
 
 %[p,t,U,A,R] = My2DPoissonSolver(geom,f,k,g);
 
