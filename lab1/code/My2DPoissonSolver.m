@@ -1,5 +1,5 @@
-function [p,t,U,A,R] = My2DPoissonSolver(geom,f,k,g)
-    [p,e,t] = initmesh(geom,'hmax',0.1);
+function [p,t,U,A,R,b,r] = My2DPoissonSolver(geom,h,f,k,g)
+    [p,e,t] = initmesh(geom,'hmax',h);
     [A,R,b,r] = assemble(p,e,t,f,k,g);
     U = (A+R)\(b+r);
 end
