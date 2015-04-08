@@ -18,7 +18,7 @@ function [A,R,b,r] = assemble(p,e,t,f,k,g)
 		  c_ = [x(3)-x(2); x(1)-x(3); x(2)-x(1)]/2/area;
 		  AK = (b_*b_'+c_*c_')*area;                          % element stiffness matrix
 		  bK = [2 1 1; 1 2 1; 1 1 2]*area/12*f(x,y)'; % element load vector
-		  A(nodes,nodes) = A(nodes,nodes) + AK;               % add element contributions to A and b
+		  A(nodes,nodes) = A(nodes,nodes) + AK;        % add element contributions to A and b
 		  b(nodes) = b(nodes) + bK;
 	end
 
