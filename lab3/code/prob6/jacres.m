@@ -6,17 +6,13 @@ x=(p(1,i)+p(1,j)+p(1,k))/3;
 y=(p(2,i)+p(2,j)+p(2,k))/3;
 % evaluate u, a, a', and f
 uu=(u(i)+u(j)+u(k))/3;
-aa=a(uu);
-da=(a(uu+1.e-8)-a(uu))/1.e-8; %Shit this is lazy to do in matlab
-ff=f(u);
-dff = (f(u+1.e8)-f(u+1.e-8))/1.e-8;
-size(dff)
-size(ff)
+aa = a(uu);
+ff = f(uu);
+dff = -ff;
 % assemble jacobian and residual
-[Aa ,unused,b]=assema(p,t,aa',0,ff);
-[Ada,unused] =assema(p,t,da',0,0);
-[unused,fExtra] = assema(p,t,dff',0,0);
-J=diag(Ada*u)+Aa+fExtra;
+[Aa ,unused, b]=assema(p,t,aa',0,ff');
+[Adff, Mdff, unused] =assema(p,t,dff',0,0);
+J=Aa - Mdff;
 r=b-Aa*u;
 % enforce B.C.
 for i=1:size(e,2)
