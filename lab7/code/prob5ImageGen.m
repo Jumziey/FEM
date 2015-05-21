@@ -27,5 +27,6 @@ for nu = visc
 	xiData= [xiData xi];
 	etaData = [etaData eta];
 	thetaData = [thetaData theta];
+	disp(sprintf('Run %d done', i))
 end
 save('data.mat', 'xiData', 'etaData', 'thetaData')
